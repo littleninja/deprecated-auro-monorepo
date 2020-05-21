@@ -9,13 +9,15 @@
     <title>Auro Web Component Generator | auro-checkbox custom element</title>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script type="module">
-      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
-      import '@polymer/iron-demo-helpers/demo-snippet';
+      import "@polymer/iron-demo-helpers/demo-pages-shared-styles";
+      import "@polymer/iron-demo-helpers/demo-snippet";
     </script>
+    <script type="module" src="../src/auro-checkbox-group.js"></script>
     <script type="module" src="../src/auro-checkbox.js"></script>
+    <script type="module" src="../demo/events.js"></script>
     <script src="../demo/alert.js"></script>
     <script type="module">
-      import '../node_modules/@polymer/iron-icons/hardware-icons.js';
+      import "../node_modules/@polymer/iron-icons/hardware-icons.js";
     </script>
     <custom-style>
       <style is="custom-style" include="demo-pages-shared-styles"></style>
@@ -27,7 +29,16 @@
     <div class="vertical-section-container">
       <h1>auro-checkbox</h1>
 
-      <p>Component description ...</p>
+      <p>
+        <code>auro-checkbox-group</code> is the wrapper for creating a group of
+        checkboxes.
+      </p>
+
+      <p>
+        <code>auro-checkbox</code> are rendered by default as square boxes that
+        are checked (ticked) when activated, like you might see in an official
+        government paper form.
+      </p>
 
       <p class="ironIcons">
         <span class="util_floatLeft util_marginRight--med"
@@ -60,9 +71,194 @@
         </span>
       </p>
 
+      <p>Default checkbox group</p>
       <demo-snippet>
         <template>
-          <auro-checkbox cssClass="testClass">Hello World!</auro-checkbox>
+          <auro-checkbox-group label="Form label goes here">
+            <auro-checkbox
+              id="computers"
+              label="Computers"
+              name="checkboxDemo1"
+              value="computers"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="music"
+              label="Music"
+              name="checkboxDemo1"
+              value="music"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="arts"
+              label="Arts"
+              name="checkboxDemo1"
+              value="arts"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="sports"
+              label="Sports"
+              name="checkboxDemo1"
+              value="sports"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="machines"
+              label="Machines"
+              name="checkboxDemo1"
+              value="machines"
+            ></auro-checkbox>
+          </auro-checkbox-group>
+        </template>
+      </demo-snippet>
+
+      <p>
+        Checkbox group, <code>horizontal</code> option (limit 3 min
+        breakpoint-narrow)
+      </p>
+      <demo-snippet>
+        <template>
+          <auro-checkbox-group label="Form label goes here" horizontal>
+            <auro-checkbox
+              id="computers"
+              label="Computers"
+              name="checkboxDemo2"
+              value="computers"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="music"
+              label="Music"
+              name="checkboxDemo2"
+              value="music"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="sports"
+              label="Sports"
+              name="checkboxDemo2"
+              value="sports"
+            ></auro-checkbox>
+          </auro-checkbox-group>
+        </template>
+      </demo-snippet>
+
+      <p>
+        Checkbox group, <code>horizontal</code> option ignored due to option
+        limit
+      </p>
+      <demo-snippet>
+        <template>
+          <auro-checkbox-group label="Form label goes here" horizontal>
+            <auro-checkbox
+              id="computers"
+              label="Computers"
+              name="checkboxDemo3"
+              value="computers"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="music"
+              label="Music"
+              name="checkboxDemo3"
+              value="music"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="arts"
+              label="Arts"
+              name="checkboxDemo3"
+              value="arts"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="sports"
+              label="Sports"
+              name="checkboxDemo3"
+              value="sports"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="machines"
+              label="Machines"
+              name="checkboxDemo3"
+              value="machines"
+            ></auro-checkbox>
+          </auro-checkbox-group>
+        </template>
+      </demo-snippet>
+
+      <p>Checkbox group with option set to <code>checked</code></p>
+      <demo-snippet>
+        <template>
+          <auro-checkbox-group label="Form label goes here">
+            <auro-checkbox
+              id="computers"
+              label="Computers"
+              name="checkboxDemo4"
+              value="computers"
+              checked
+            ></auro-checkbox>
+            <auro-checkbox
+              id="music"
+              label="Music"
+              name="checkboxDemo4"
+              value="music"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="arts"
+              label="Arts"
+              name="checkboxDemo4"
+              value="arts"
+            ></auro-checkbox>
+          </auro-checkbox-group>
+        </template>
+      </demo-snippet>
+
+      <p>Checkbox group set <code>disabled</code></p>
+      <demo-snippet>
+        <template>
+          <auro-checkbox-group label="Form label goes here" disabled>
+            <auro-checkbox
+              id="computers"
+              label="Computers"
+              name="checkboxDemo5"
+              value="computers"
+              checked
+            ></auro-checkbox>
+            <auro-checkbox
+              id="music"
+              label="Music"
+              name="checkboxDemo5"
+              value="music"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="arts"
+              label="Arts"
+              name="checkboxDemo5"
+              value="arts"
+            ></auro-checkbox>
+          </auro-checkbox-group>
+        </template>
+      </demo-snippet>
+
+      <p>Checkbox group with error</p>
+      <demo-snippet>
+        <template>
+          <auro-checkbox-group
+            label="Form label goes here"
+            error="Selection is required; please update."
+          >
+            <auro-checkbox
+              id="computers"
+              label="Computers"
+              name="checkboxDemo6"
+              value="computers"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="music"
+              label="Music"
+              name="checkboxDemo6"
+              value="music"
+            ></auro-checkbox>
+            <auro-checkbox
+              id="arts"
+              label="Arts"
+              name="checkboxDemo6"
+              value="arts"
+            ></auro-checkbox>
+          </auro-checkbox-group>
         </template>
       </demo-snippet>
 

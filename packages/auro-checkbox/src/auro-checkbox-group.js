@@ -8,14 +8,14 @@ import { classMap } from 'lit-html/directives/class-map';
 import 'focus-visible/dist/focus-visible.min.js';
 
 // Import the processed CSS file into the scope of the component
-import componentProperties from './tokens/componentShapeProperties-css.js';
-import styleCss from "./ods-style-css.js";
+import styleCss from "./auro-checkbox-group-css.js";
 
 class AuroCheckboxGroup extends LitElement {
   constructor() {
     super();
 
     this.index = 0;
+    this.maxNumber = 3;
   }
 
   static get properties() {
@@ -44,11 +44,10 @@ class AuroCheckboxGroup extends LitElement {
 
   render() {
     const groupClasses = {
-      'displayFlex': this.horizontal && this.items.length <= 3
+      'displayFlex': this.horizontal && this.items.length <= this.maxNumber
     }
 
     return html`
-      ${componentProperties}
       ${styleCss}
 
       ${this.errorChange()}

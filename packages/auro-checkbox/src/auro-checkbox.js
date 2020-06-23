@@ -5,13 +5,11 @@
 
 import { LitElement, html } from "lit-element";
 import { classMap } from 'lit-html/directives/class-map';
-import {ifDefined} from 'lit-html/directives/if-defined';
-import componentProperties from './tokens/componentShapeProperties-css.js';
-
+import { ifDefined } from 'lit-html/directives/if-defined';
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
-import styleCss from "./ods-style-css.js";
+import styleCss from "./auro-checkbox-css.js";
 
 // build the component class
 class AuroCheckbox extends LitElement {
@@ -25,9 +23,9 @@ class AuroCheckbox extends LitElement {
   static get properties() {
     return {
       checked: {
-          type: Boolean,
-          reflect: true
-        },
+        type: Boolean,
+        reflect: true
+      },
       disabled: {
         type: Boolean,
         reflect: true
@@ -50,18 +48,17 @@ class AuroCheckbox extends LitElement {
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     const labelClasses = {
-      'ods-inputLabel': true,
-      'ods-inputLabel--checkbox': true,
+      'label': true,
+      'label--cbx': true,
       'errorBorder': Boolean(this.error)
     }
 
     return html`
-      ${componentProperties}
       ${styleCss}
 
-      <div class="ods-inputGroup">
+      <div class="cbxGroup">
         <input
-          class="util_displayHiddenVisually ods-inputOption"
+          class="util_displayHiddenVisually cbx--input"
           @input="${this.handleInput}"
           ?disabled="${this.disabled}"
           ?checked="${this.checked}"

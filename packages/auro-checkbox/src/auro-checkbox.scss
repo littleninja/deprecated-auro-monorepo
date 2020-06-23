@@ -1,0 +1,195 @@
+// Copyright (c) 2020 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// See LICENSE in the project root for license information.
+
+// ---------------------------------------------------------------------
+
+// import legacy variables to support deprecated Sass in WCSS
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables";
+
+// Import Auro tokens
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
+
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/core";
+@import './node_modules/@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses/displayProperties';
+
+// container styles - defines the look of the outer custom componet
+:host {
+  display: block;
+}
+
+:host(ods-inputoption-radio-group) {
+  padding-bottom: var(--size-scale-med);
+}
+
+// layout styles - define any layout specifications for UI that is contained WITHIN the component
+// never define layout that would cause effect on element ouside the scope of this component
+
+@mixin focus-visible {
+  .displayFlex {
+    .inputGroup:focus-within {
+      width: auto;
+    }
+  }
+
+  .cbxGroup {
+    display: block;
+    background-color: var(--auro-color-brand-atlas-400);
+
+    padding-right: 10px;
+    margin-right: -10px;
+
+    .cbx--input {
+      background-color: var(--auro-color-brand-atlas-400);
+
+      & + label {
+        color: var(--auro-color-base-white);
+      }
+    }
+
+    .label--cbx {
+      &:before{
+        border-color: var(--auro-color-brand-atlas-400);
+      }
+
+      &:after {
+        border-color: var(--auro-color-base-white);
+        background-color: var(--auro-color-base-white);
+      }
+    }
+  }
+}
+
+:host(.focus-visible) {
+  @include focus-visible;
+}
+
+fieldset {
+  all: unset;
+}
+
+// refactor
+.displayFlex {
+  slot {
+    @include breakpoint-narrow {
+      display: flex;
+
+      .ods-inputGroup {
+        margin-left: 10px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.cbxGroup {
+  position: relative;
+  padding-left: 0.5rem;
+  line-height: 36px;
+}
+
+.cbx--input {
+  &:disabled {
+
+    & + label {
+      color: var(--auro-color-text-disabled-on-light);
+    }
+
+    & + .label--cbx {
+      &:before,
+      &:after {
+        border-color: var(--auro-color-border-primary-on-light);
+      }
+    }
+  }
+
+  &:checked {
+    & + .label--cbx {
+      &:after {
+        opacity: 1;
+        background-color: var(--auro-color-ui-default-on-light);
+        border-color: var(--auro-color-border-active-on-light);
+      }
+
+      &:before {
+        transition: background-color 0.2s cubic-bezier(.35,.9,.4,.9);
+        opacity: 1;
+      }
+    }
+
+    &:disabled {
+      & + .label--cbx {
+        &:after {
+          background-color: white;
+          border-color: var(--auro-color-border-primary-on-light);
+        }
+      }
+    }
+
+    & + .errorBorder {
+      &:before {
+        border-color: white;
+      }
+      &:after {
+        border-color: var(--auro-color-border-error-on-light);
+        background-color: var(--auro-color-border-error-on-light);
+      }
+    }
+  }
+}
+
+.label {
+  margin-left: var(--auro-size-xl);
+  display: block;
+}
+
+.label--cbx {
+  &:after {
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    content: '';
+    top: 4px;
+    left: var(--auro-size-xs);
+    width: var(--auro-size-lg);
+    height: var(--auro-size-lg);
+    border: var(--auro-border-width-thin) solid var(--auro-color-base-gray-500);
+    border-radius: var(--auro-border-radius);
+    z-index: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+
+    top: 6px;
+    left: 18px;
+    width: 6px;
+    height: 18px;
+    border-style: solid;
+    border-color: var(--auro-color-base-white);
+    border-width: 2px;
+    border-top-width: 0;
+    border-left-width: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.errorText {
+  color: var(--auro-color-text-error-on-light);
+  margin-bottom: 0;
+}
+
+.label--cbx {
+  &.errorBorder {
+    &:after {
+      border-color: var(--auro-color-border-error-on-light);
+    }
+  }
+}

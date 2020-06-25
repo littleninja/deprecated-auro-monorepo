@@ -5,18 +5,33 @@
 
 // Creates ods-inputoptions CSS UI definition of shape
 
+:host {
+  display: block;
+  padding-bottom: var(--auro-size-md);
+}
+
+:host([error]) {
+  color: var(--auro-color-text-error-on-light);
+}
+
+:host([disabled]) {
+  color: var(--auro-color-text-disabled-on-light);
+}
+
+.displayFlex {
+  legend + slot {
+    display: flex;
+    white-space: nowrap;
+  }
+}
+
 fieldset {
   all: unset;
+
 }
 
 legend {
   margin-bottom: var(--auro-size-md);
-}
-
-:host([error]) {
-  legend {
-    color: var(--auro-color-text-error-on-light);
-  }
 }
 
 .errorText {

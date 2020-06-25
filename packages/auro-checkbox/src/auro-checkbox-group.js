@@ -1,6 +1,8 @@
-// Copyright (c) Alaska Air. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2020 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
+
 // ---------------------------------------------------------------------
+
 import { LitElement, html } from "lit-element";
 import { classMap } from 'lit-html/directives/class-map';
 
@@ -22,8 +24,8 @@ class AuroCheckboxGroup extends LitElement {
     return {
       disabled:   { type: Boolean },
       horizontal: { type: Boolean },
-      error:      { type: String },
-      label:      { type: String }
+      required:   { type: Boolean },
+      error:      { type: String }
     };
   }
 
@@ -33,6 +35,10 @@ class AuroCheckboxGroup extends LitElement {
 
     this.items.forEach((el) => {
       el.disabled = this.disabled
+    });
+
+    this.items.forEach((el) => {
+      el.required = this.required
     });
   }
 
@@ -53,15 +59,15 @@ class AuroCheckboxGroup extends LitElement {
       ${this.errorChange()}
 
       <fieldset class="${classMap(groupClasses)}">
-        ${this.label
-          ? html`<legend>${this.label}</legend>`
-          : html``
+        ${this.required
+          ? html`<legend><slot name="legend"></slot></legend>`
+          : html`<legend><slot name="legend"></slot> (optional)</legend>`
         }
         <slot></slot>
       </fieldset>
 
       ${this.error
-        ? html`<p class="errorText">${this.error}</p>`
+        ? html`<p role="alert" class="errorText">${this.error}</p>`
         : html``}
     `;
   }

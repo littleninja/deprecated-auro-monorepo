@@ -40,6 +40,7 @@ Defining the component dependency within each component that is using the `<auro
 
 ```javascript
 import "@alaskaairux/auro-checkbox";
+import "@alaskaairux/auro-checkbox/dist/auro-checkbox-group";
 ```
 
 **Reference component in HTML**
@@ -62,101 +63,13 @@ In cases where the project is not able to process JS assets, there are pre-proce
 
 <script src="https://unpkg.com/@alaskaairux/auro-checkbox@:version/dist/polyfills.js"></script>
 <script src="https://unpkg.com/@alaskaairux/auro-checkbox@:version/dist/auro-checkbox__bundled.js"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-checkbox@:version/dist/auro-checkbox-group__bundled.js"></script>
 ```
 
 ### polyfills.js
 
 The `polyfills.js` is packaged with this component, but **IT IS NOT NEEDED** to load a polyfill per component. The `polyfills.js` will work for all additional components added to the project.
 
-
-## auro-checkbox use cases
-
-The `<auro-checkbox-group` and `<auro-checkbox>` element should be used in situations where users may:
-
-* Want to select one or more options
-* Want an element that can be turned on and off
-* Want to display options horizontally or vertically
-
-## Properties: auro-checkbox-group
-
-| Attribute | Value type | Description |
-|----|----|----|
-| disabled | boolean | enables disabled state of the element |
-| error | string | set error message for checkbox group |
-| horizontal | boolean | toggles layout direction, default is `vertical`, max 3 options |
-| label | string | sets content for checkbox group label |
-
-## Properties: auro-checkbox
-
-| Attribute | Value type | Description |
-|----|----|----|
-| checked | boolean | enables checked state of the element | 
-| disabled | boolean | enables disabled state of the element |
-| error | string | set error state for checkbox |
-| id | string | sets the individual `id` per element |
-| label | string | sets content for checkbox label |
-| name | string | Accepts any string, `DOMString` representing the value of the input |
-| value | string | sets the elements input value |
-
-## API Code Examples
-
-Default Checkbox Group
-
-```html
-<auro-checkbox-group label="Form label goes here">
-  <auro-checkbox id="computers" label="Computers" name="checkboxDemo1" value="computers"></auro-checkbox>
-  <auro-checkbox id="music" label="Music" name="checkboxDemo1" value="music"></auro-checkbox>
-  <auro-checkbox id="arts" label="Arts" name="checkboxDemo1" value="arts"></auro-checkbox>
-  <auro-checkbox id="sports" label="Sports" name="checkboxDemo1" value="sports"></auro-checkbox>
-  <auro-checkbox id="machines" label="Machines" name="checkboxDemo1" value="machines"></auro-checkbox>
-</auro-checkbox-group>
-``` 
-
-`Horizontal` Checkbox Group (limit 3 min breakpoint-narrow)
-
-```html
-<auro-checkbox-group label="Form label goes here" horizontal>
-  <auro-checkbox id="computers" label="Computers" name="checkboxDemo1" value="computers"></auro-checkbox>
-  <auro-checkbox id="music" label="Music" name="checkboxDemo1" value="music"></auro-checkbox>
-  <auro-checkbox id="arts" label="Arts" name="checkboxDemo1" value="arts"></auro-checkbox>
-</auro-checkbox-group>
-``` 
-
-Pre-selected Option Checkbox Group
-
-```html
-<auro-checkbox-group label="Form label goes here">
-  <auro-checkbox id="computers" label="Computers" name="checkboxDemo1" value="computers" checked></auro-checkbox>
-  <auro-checkbox id="music" label="Music" name="checkboxDemo1" value="music"></auro-checkbox>
-  <auro-checkbox id="arts" label="Arts" name="checkboxDemo1" value="arts"></auro-checkbox>
-  <auro-checkbox id="sports" label="Sports" name="checkboxDemo1" value="sports"></auro-checkbox>
-  <auro-checkbox id="machines" label="Machines" name="checkboxDemo1" value="machines"></auro-checkbox>
-</auro-checkbox-group>
-``` 
-
-Disabled Checkbox Group
-
-```html
-<auro-checkbox-group label="Form label goes here" disabled>
-  <auro-checkbox id="computers" label="Computers" name="checkboxDemo1" value="computers"></auro-checkbox>
-  <auro-checkbox id="music" label="Music" name="checkboxDemo1" value="music"></auro-checkbox>
-  <auro-checkbox id="arts" label="Arts" name="checkboxDemo1" value="arts"></auro-checkbox>
-  <auro-checkbox id="sports" label="Sports" name="checkboxDemo1" value="sports"></auro-checkbox>
-  <auro-checkbox id="machines" label="Machines" name="checkboxDemo1" value="machines"></auro-checkbox>
-</auro-checkbox-group>
-``` 
-
-Checkbox Group with Error
-
-```html
-<auro-checkbox-group label="Form label goes here" error="Selection is required; please update.">
-  <auro-checkbox id="computers" label="Computers" name="checkboxDemo1" value="computers"></auro-checkbox>
-  <auro-checkbox id="music" label="Music" name="checkboxDemo1" value="music"></auro-checkbox>
-  <auro-checkbox id="arts" label="Arts" name="checkboxDemo1" value="arts"></auro-checkbox>
-  <auro-checkbox id="sports" label="Sports" name="checkboxDemo1" value="sports"></auro-checkbox>
-  <auro-checkbox id="machines" label="Machines" name="checkboxDemo1" value="machines"></auro-checkbox>
-</auro-checkbox-group>
-``` 
 
 ## Development
 

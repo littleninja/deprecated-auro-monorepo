@@ -3,7 +3,8 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 const config = {
   entry: {
-    ['auro-checkbox__bundled']: './src/auro-checkbox.js'
+    ['auro-checkbox__bundled']: './src/auro-checkbox.js',
+    ['auro-checkbox-group__bundled']: './src/auro-checkbox-group.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),

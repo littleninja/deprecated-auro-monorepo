@@ -30,6 +30,10 @@ class AuroCheckbox extends LitElement {
         type: Boolean,
         reflect: true
       },
+      required: {
+        type: Boolean,
+        reflect: true
+      },
       error: {
         type: String,
         reflect: true
@@ -43,6 +47,22 @@ class AuroCheckbox extends LitElement {
 
   handleInput(event) {
     this.checked = event.target.checked;
+  }
+
+  invalid(error) {
+    if (error) {
+      return 'true';
+    }
+
+    return 'false'
+  }
+
+  isRequired(required) {
+    if (required) {
+      return 'true';
+    }
+
+    return 'false'
   }
 
   // function that renders the HTML and CSS into  the scope of the component
@@ -61,6 +81,8 @@ class AuroCheckbox extends LitElement {
           class="util_displayHiddenVisually cbx--input"
           @input="${this.handleInput}"
           ?disabled="${this.disabled}"
+          aria-invalid="${this.invalid(this.error)}"
+          aria-required="${this.isRequired(this.required)}"
           ?checked="${this.checked}"
           id="${ifDefined(this.id)}"
           name="${ifDefined(this.name)}"
@@ -68,10 +90,9 @@ class AuroCheckbox extends LitElement {
           .value="${ifDefined(this.value)}"
         />
 
-        <label
-          for="${ifDefined(this.id)}"
-          class="${classMap(labelClasses)}"
-        >${this.label}</label>
+        <label for="${ifDefined(this.id)}" class="${classMap(labelClasses)}">
+          <slot></slot>
+        </label>
       </div>
     `;
   }

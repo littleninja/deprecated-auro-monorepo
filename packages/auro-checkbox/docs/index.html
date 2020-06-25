@@ -19,12 +19,6 @@
       }
     }
 
-    .wc-wrapper auro-checkbox {
-      display: inline-block;
-      margin-bottom: var(--auro-size-md);
-      margin-right: var(--auro-size-md);
-    }
-
     .codeWrapper {
       background-color: var(--auro-color-brand-midnight-400);
       color: #fff;
@@ -51,7 +45,7 @@
     }
 
     var auroCheckbox = [
-      '<auro-checkbox cssClass="testClass">Hello World</auro-checkbox>'
+      '<auro-checkbox id="music" name="checkboxDemo1" value="music">Music</auro-checkbox>',
     ]
   </script>
 </head>
@@ -78,6 +72,15 @@
       </div>
     </section>
 
+    <section class="wc-wrapper">
+        <h3>auro-checkbox group</h3>
+        <auro-checkbox-group>
+          <span slot="legend">Form label goes here</span>
+          <auro-checkbox id="computers" name="checkboxDemo1" value="computers">Computers</auro-checkbox>
+          <auro-checkbox id="music" name="checkboxDemo1" value="music">Music</auro-checkbox>
+        </auro-checkbox-group>
+      </section>
+
   </main>
   <div id="assets">
     <link rel="stylesheet"
@@ -88,7 +91,9 @@
 
     <!-- for initial build and test only -->
     <script src="./polyfills.js"></script>
+    <script src="./auro-checkbox-group__bundled.js"></script>
     <script src="./auro-checkbox__bundled.js"></script>
+
 
     <!-- once first build has been released, update with the links below -->
     <!-- Be sure to update the :version number -->

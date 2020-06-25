@@ -10,8 +10,8 @@ altImports/
 ## CSS built from Sass process
 demo/css
 demo/sass/tokenProperties.scss
-src/style.css
-src/ods-style.css
+src/auro-checkbox-group.css
+src/auro-checkbox.css
 
 ## *-css built from sass-render process
 *-css.js

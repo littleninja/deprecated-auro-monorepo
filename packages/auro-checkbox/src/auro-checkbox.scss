@@ -8,7 +8,6 @@
 
 // Import Auro tokens
 @import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
-@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
 
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/core";
@@ -21,6 +20,10 @@
 
 :host(ods-inputoption-radio-group) {
   padding-bottom: var(--size-scale-med);
+}
+
+:host([error='true']) {
+  color: var(--auro-color-text-error-on-light);
 }
 
 // layout styles - define any layout specifications for UI that is contained WITHIN the component

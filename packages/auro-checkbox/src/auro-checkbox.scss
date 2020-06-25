@@ -91,8 +91,8 @@ fieldset {
 
 .cbxGroup {
   position: relative;
-  padding-left: 0.5rem;
-  line-height: 36px;
+  padding-left: var(--auro-size-xs);
+  line-height: calc((var(--auro-size-xl)) + (var(--auro-size-xxs)))
 }
 
 .cbx--input {
@@ -127,7 +127,7 @@ fieldset {
     &:disabled {
       & + .label--cbx {
         &:after {
-          background-color: white;
+          background-color: var(--auro-color-base-white);
           border-color: var(--auro-color-border-primary-on-light);
         }
       }
@@ -135,7 +135,7 @@ fieldset {
 
     & + .errorBorder {
       &:before {
-        border-color: white;
+        border-color: var(--auro-color-base-white);
       }
       &:after {
         border-color: var(--auro-color-border-error-on-light);
@@ -150,16 +150,19 @@ fieldset {
   display: block;
 }
 
+// No tokens available for values used here
 .label--cbx {
   &:after {
     -webkit-tap-highlight-color: transparent;
     position: absolute;
     content: '';
-    top: 4px;
+    top: var(--auro-size-xxs);
     left: var(--auro-size-xs);
     width: var(--auro-size-lg);
     height: var(--auro-size-lg);
-    border: var(--auro-border-width-thin) solid var(--auro-color-base-gray-500);
+    border-width: var(--auro-border-width-thin);
+    border-style: solid;
+    border-color: var(--auro-color-base-gray-500);
     border-radius: var(--auro-border-radius);
     z-index: 0;
   }

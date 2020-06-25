@@ -12,8 +12,8 @@ For the most up to date information on UI development browser support, see [docs
 
 ## Install
 
-[![Build Status](https://img.shields.io/travis/AlaskaAirlines/auro-checkbox.svg?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/auro-checkbox)
-[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux//auro-checkbox.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux//auro-checkbox)
+[![Build Status](https://img.shields.io/travis/AlaskaAirlines/auro-checkbox?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/auro-checkbox)
+[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-checkbox?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux//auro-checkbox)
 [![License](https://img.shields.io/npm/l/@alaskaairux/orion-design-tokens.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ```shell

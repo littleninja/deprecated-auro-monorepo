@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html } from "lit-element";
+import { LitElement, html, css } from "lit-element";
 import { classMap } from 'lit-html/directives/class-map';
 import { ifDefined } from 'lit-html/directives/if-defined';
 
@@ -17,6 +17,12 @@ class AuroCheckbox extends LitElement {
     super();
     this.checked = false;
     this.disabled = false;
+  }
+
+  static get styles() {
+    return css`
+      ${styleCss}
+    `;
   }
 
   // function to define props used within the scope of thie component
@@ -73,8 +79,6 @@ class AuroCheckbox extends LitElement {
     }
 
     return html`
-      ${styleCss}
-
       <div class="cbxGroup">
         <input
           class="util_displayHiddenVisually cbx--input"

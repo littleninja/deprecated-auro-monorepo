@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html } from "lit-element";
+import { LitElement, html, css } from "lit-element";
 import { classMap } from 'lit-html/directives/class-map';
 
 // Import touch detection lib
@@ -18,6 +18,12 @@ class AuroCheckboxGroup extends LitElement {
 
     this.index = 0;
     this.maxNumber = 3;
+  }
+
+  static get styles() {
+    return css`
+      ${styleCss}
+    `;
   }
 
   static get properties() {
@@ -54,8 +60,6 @@ class AuroCheckboxGroup extends LitElement {
     }
 
     return html`
-      ${styleCss}
-
       ${this.errorChange()}
 
       <fieldset class="${classMap(groupClasses)}">

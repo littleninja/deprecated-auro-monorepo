@@ -39,7 +39,6 @@ class AuroCheckbox extends LitElement {
         reflect: true
       },
       id:       { type: String },
-      label:    { type: String },
       name:     { type: String },
       value:    { type: String }
     };

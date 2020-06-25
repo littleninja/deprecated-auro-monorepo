@@ -31,7 +31,7 @@ class AuroCheckboxGroup extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    this.items = Array.from(this.querySelectorAll('auro-checkbox')) || [];
+    this.items = Array.from(this.querySelectorAll('auro-checkbox'));
 
     this.items.forEach((el) => {
       el.disabled = this.disabled

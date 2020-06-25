@@ -17,7 +17,7 @@ describe('auro-checkbox-group', () => {
         horizontal
         required
         error=${expectedError}
-      ></ods-inputoption-radio-group>
+      >Checkbox option</auro-checkbox-group>
     `);
 
     const root = el.shadowRoot;
@@ -26,6 +26,10 @@ describe('auro-checkbox-group', () => {
     expect(el.horizontal).to.be.true;
     expect(el.required).to.be.true;
     expect(error.textContent).be.equal(expectedError);
+    expect(el).dom.to.equal(`
+    <auro-checkbox-group horizontal required error="${expectedError}">
+      Checkbox option
+    </auro-checkbox-group>`);
   });
 });
 
@@ -43,8 +47,9 @@ describe('auro-checkbox', () => {
         value="${expectedValue}"
         checked
         disabled
+        required
         error="${expectedError}"
-      ></auro-checkbox>
+      >Checkbox option</auro-checkbox>
     `);
 
     const root = el.shadowRoot;
@@ -57,6 +62,10 @@ describe('auro-checkbox', () => {
     expect(input.name).to.equal(expectedName);
     expect(input.type).to.equal('checkbox');
     expect(errorBorder).to.not.be.undefined;
+    expect(el).dom.to.equal(`
+    <auro-checkbox id="${expectedId}" name="${expectedName}" value="${expectedValue}" error="${expectedError}" checked disabled required>
+      Checkbox option
+    </auro-checkbox>`);
   });
 
   it('should fire a input event with correct data', async () => {

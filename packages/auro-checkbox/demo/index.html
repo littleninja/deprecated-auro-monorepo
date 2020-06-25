@@ -71,6 +71,14 @@
         </span>
       </p>
 
+      <p>Group only</p>
+      <demo-snippet>
+        <template>
+          <auro-checkbox-group>
+          </auro-checkbox-group>
+        </template>
+      </demo-snippet>
+
       <p>Default checkbox group</p>
       <demo-snippet>
         <template>
@@ -172,26 +180,24 @@
       <p>Checkbox group with option set to <code>checked</code></p>
       <demo-snippet>
         <template>
-          <auro-checkbox-group label="Form label goes here">
+          <auro-checkbox-group>
+            <span slot="legend">Form label goes here</span>
             <auro-checkbox
               id="computers"
-              label="Computers"
               name="checkboxDemo4"
               value="computers"
               checked
-            ></auro-checkbox>
+            >Computers</auro-checkbox>
             <auro-checkbox
               id="music"
-              label="Music"
               name="checkboxDemo4"
               value="music"
-            ></auro-checkbox>
+            >Music</auro-checkbox>
             <auro-checkbox
               id="arts"
-              label="Arts"
               name="checkboxDemo4"
               value="arts"
-            ></auro-checkbox>
+            >Arts</auro-checkbox>
           </auro-checkbox-group>
         </template>
       </demo-snippet>
@@ -199,26 +205,24 @@
       <p>Checkbox group set <code>disabled</code></p>
       <demo-snippet>
         <template>
-          <auro-checkbox-group label="Form label goes here" disabled>
+          <auro-checkbox-group disabled>
+            <span slot="legend">Form label goes here</span>
             <auro-checkbox
               id="computers"
-              label="Computers"
               name="checkboxDemo5"
               value="computers"
               checked
-            ></auro-checkbox>
+            >Computers</auro-checkbox>
             <auro-checkbox
               id="music"
-              label="Music"
               name="checkboxDemo5"
               value="music"
-            ></auro-checkbox>
+            >Music</auro-checkbox>
             <auro-checkbox
               id="arts"
-              label="Arts"
               name="checkboxDemo5"
               value="arts"
-            ></auro-checkbox>
+            >Arts</auro-checkbox>
           </auro-checkbox-group>
         </template>
       </demo-snippet>
@@ -226,28 +230,23 @@
       <p>Checkbox group with error</p>
       <demo-snippet>
         <template>
-          <auro-checkbox-group
-            label="Form label goes here"
-            error="Selection is required; please update."
-          >
+          <auro-checkbox-group error="Selection is required; please update.">
+            <span slot="legend">Form label goes here</span>
             <auro-checkbox
               id="computers"
-              label="Computers"
               name="checkboxDemo6"
               value="computers"
-            ></auro-checkbox>
+            >Computers</auro-checkbox>
             <auro-checkbox
               id="music"
-              label="Music"
               name="checkboxDemo6"
               value="music"
-            ></auro-checkbox>
+            >Music</auro-checkbox>
             <auro-checkbox
               id="arts"
-              label="Arts"
               name="checkboxDemo6"
               value="arts"
-            ></auro-checkbox>
+            >Arts</auro-checkbox>
           </auro-checkbox-group>
         </template>
       </demo-snippet>

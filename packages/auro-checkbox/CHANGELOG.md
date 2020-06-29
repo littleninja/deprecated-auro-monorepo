@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.0.1](https://github.com/AlaskaAirlines/auro-checkbox/compare/v1.0.0...v1.0.1) (2020-06-29)
+
+
+### Bug Fixes
+
+* update missed fallback CSS support ([9052b96](https://github.com/AlaskaAirlines/auro-checkbox/commit/9052b966dd2a84ab41e060c2db932d5621f5d917))
+
 # 1.0.0 (2020-06-25)
 
 

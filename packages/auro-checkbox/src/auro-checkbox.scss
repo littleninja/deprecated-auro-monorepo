@@ -8,6 +8,7 @@
 
 // Import Auro tokens
 @import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
 
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/core";
@@ -16,10 +17,6 @@
 // container styles - defines the look of the outer custom componet
 :host {
   display: block;
-}
-
-:host(ods-inputoption-radio-group) {
-  padding-bottom: var(--size-scale-med);
 }
 
 :host([error='true']) {

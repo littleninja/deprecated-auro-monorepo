@@ -1,9 +1,10 @@
-// Copyright (c) Alaska Air. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2020 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
 
-// Creates ods-inputoptions CSS UI definition of shape
+// Import Auro tokens
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
 
 :host {
   display: block;

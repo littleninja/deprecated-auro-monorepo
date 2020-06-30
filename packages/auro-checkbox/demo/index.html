@@ -82,6 +82,40 @@
       <p>Default checkbox group</p>
       <demo-snippet>
         <template>
+          <auro-checkbox-group required>
+            <span slot="legend">Form label goes here</span>
+            <auro-checkbox
+              id="computers01"
+              name="checkboxDemo2"
+              value="computers"
+            >Computers</auro-checkbox>
+            <auro-checkbox
+              id="music01"
+              name="checkboxDemo2"
+              value="music"
+            >Music</auro-checkbox>
+            <auro-checkbox
+              id="arts01"
+              name="checkboxDemo2"
+              value="arts01"
+            >Arts</auro-checkbox>
+            <auro-checkbox
+              id="sports01"
+              name="checkboxDemo2"
+              value="sports"
+            >Sports</auro-checkbox>
+            <auro-checkbox
+              id="machines01"
+              name="checkboxDemo2"
+              value="machines"
+            >Machines</auro-checkbox>
+          </auro-checkbox-group>
+        </template>
+      </demo-snippet>
+
+      <p>Default checkbox group (optional w/error)</p>
+      <demo-snippet>
+        <template>
           <auro-checkbox-group error="oops">
             <span slot="legend">Form label goes here</span>
             <auro-checkbox

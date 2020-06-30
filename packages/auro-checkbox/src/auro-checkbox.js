@@ -52,11 +52,11 @@ class AuroCheckbox extends LitElement {
 
   // This custom event is only for the purpose of supporting IE
   // .addEventListener('change', function() { })
-  change(event) {
-    this.value = event.target.value
-    const customEvent = new event.constructor(event.type, event)
+  handleChange(event) {
+    this.checked = event.target.checked;
+    const customEvent = new CustomEvent(event.type, event);
 
-    this.dispatchEvent(customEvent)
+    this.dispatchEvent(customEvent);
   }
 
   handleInput(event) {
@@ -91,7 +91,7 @@ class AuroCheckbox extends LitElement {
       <div class="cbxGroup">
         <input
           class="util_displayHiddenVisually cbx--input"
-          @change=${(event) => this.change(event)}
+          @change=${this.handleChange}
           @input="${this.handleInput}"
           ?disabled="${this.disabled}"
           aria-invalid="${this.invalid(this.error)}"

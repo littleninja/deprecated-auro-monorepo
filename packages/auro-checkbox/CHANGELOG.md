@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [1.1.0](https://github.com/AlaskaAirlines/auro-checkbox/compare/v1.0.1...v1.1.0) (2020-06-30)
+
+
+### Bug Fixes
+
+* update post review ([0095c50](https://github.com/AlaskaAirlines/auro-checkbox/commit/0095c50bc1e1b55a0bd10ddd31d6c2bb7c8f231c))
+
+
+### Features
+
+* add support for event and IE11 support ([982c0d5](https://github.com/AlaskaAirlines/auro-checkbox/commit/982c0d521abc1b26a843b93100ccf69020f59567))
+
 ## [1.0.1](https://github.com/AlaskaAirlines/auro-checkbox/compare/v1.0.0...v1.0.1) (2020-06-29)
 
 

@@ -51,7 +51,7 @@
     }
 
     var auroHeader = [
-      '<auro-header cssClass="testClass">Hello World</auro-header>'
+      '<auro-header level="2" display="display">Hello World!</auro-header>'
     ]
   </script>
 </head>
@@ -71,7 +71,7 @@
         <code>
           <script>
             for (i = 0; i < auroHeader.length; i++) {
-              document.write("<p> ".concat(escapeHTML(auroHeader[i]), " </p>"));
+              document.write(escapeHTML(auroHeader[i]));
             }
           </script>
         </code>

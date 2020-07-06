@@ -9,6 +9,8 @@
 
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/core";
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/headings";
+
 
 // container styles - defines the look of the outer custom componet
 // :host {
@@ -17,16 +19,3 @@
 
 // layout styles - define any layout specifications for UI that is contained WITHIN the component
 // never define layout that would cause effect on element ouside the scope of this component
-
-
-// component shape styles
-// .auro-header {
-//   ...
-// }
-
-.testClass {
-  color:  var(--auro-color-border-error-on-light);
-  border: 1px solid var(--auro-color-border-error-on-light);
-  display: inline-block;
-  padding: var(--auro-text-body-size-default);
-}

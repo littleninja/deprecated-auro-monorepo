@@ -1,20 +1,20 @@
-## Element auro-header
+## auro-header
 
-`<auro-header>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
+`<auro-header>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of quickly creating page and content headers.
 
 ## Docs
 
-All information regarding Project Setup, Technical Details, Tests and information regarding Auro Stateless Components can be found in the [docs](https://github.com/AlaskaAirlines/auro_docs/tree/master/src) project repository.
+All information regarding Project Setup, Technical Details, Tests and information regarding Auro Stateless Components can be found in the [docs](https://auro.alaskaair.com/components/auro/header) project documentation site.
 
 ## UI development browser support
 
-For the most up to date information on UI development browser support, see [docs/BROWSER_SUPPORT.md](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/BROWSER_SUPPORT.md)
+For the most up to date information on UI development [browser support](https://auro.alaskaair.com/support/browsersSupport)
 
 ## Install
 
-[![Build Status](https://img.shields.io/travis/AlaskaAirlines/auro-header.svg?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/auro-header)
-[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux//auro-header.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux//auro-header)
-[![License](https://img.shields.io/npm/l/@alaskaairux//auro-header.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Build Status](https://img.shields.io/travis/AlaskaAirlines/auro-header?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/auro-header)
+[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-header?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/auro-header)
+[![License](https://img.shields.io/npm/l/@alaskaairux/auro-header?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ```shell
 $ npm i @alaskaairux/auro-header
@@ -24,15 +24,11 @@ Installing as a direct, dev or peer dependency is up to the user installing the 
 
 ### Design Token CSS Custom Property dependency
 
-The use of any Auro custom element has a dependency on the [Auro Design Tokens](https://github.com/AlaskaAirlines/OrionDesignTokens).
+The use of any Auro custom element has a dependency on the [Auro Design Tokens](https://auro.alaskaair.com/getting-started/developers/design-tokens/install).
 
-For additional details in regards to using Auro Design Tokens with components, please see [docs/TECH_DETAILS.md](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TECH_DETAILS.md)
+### Heading styles
 
-### CSS Custom Property fallbacks
-
-[CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are [not supported](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/CUSTOM_PROPERTIES.md) in older browsers. For this, fallback properties are pre-generated and included with the npm.
-
-Any update to the Auro Design Tokens will be immediately reflected with browsers that support CSS custom properties, legacy browsers will require updated components with pre-generated fallback properties.
+All Auro heading styles are packaged with this component. There is no need to reference WCSS header styles in your project.
 
 ### Define dependency in project component
 
@@ -47,6 +43,10 @@ import "@alaskaairux/auro-header";
 ```html
 <auro-header>Hello World</auro-header>
 ```
+
+## SEO / a11y
+
+The auro-header component follows all best practices for SEO and accessibility standards. This component places all content within the scope of the [slot element](https://auro.alaskaair.com/support/slots) to ensure discoverability of content regardless of JavaScript support.
 
 ## Install bundled assets from CDN
 
@@ -71,22 +71,15 @@ The `polyfills.js` is packaged with this component, but **IT IS NOT NEEDED** to 
 
 The `<auro-header>` element should be used in situations where users may:
 
-* ...
-* ...
-* ...
-
-## Properties:
-
-| Attribute | Value type | Description |
-|----|----|----|
-| attr | string, boolean, function | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
+* page header
+* content / paragraph header
 
 ## API Code Examples
 
 Default auro-header
 
 ```html
-<auro-header>Hello World</auro-header>
+<auro-header level="1" display="display">Hello World</auro-header>
 ```
 
 ## Development

@@ -1,4 +1,4 @@
-## Properties:
+# Auro Header API
 
 | Attribute | Value type | Description |
 |----|----|----|

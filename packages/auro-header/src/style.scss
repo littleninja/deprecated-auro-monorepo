@@ -11,6 +11,10 @@
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/core";
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/headings";
 
+$auro-spacing-types: stack;
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariableMap";
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/spacingUtility";
+
 
 // container styles - defines the look of the outer custom componet
 // :host {

@@ -19,12 +19,6 @@
       }
     }
 
-    .wc-wrapper auro-header {
-      display: inline-block;
-      margin-bottom: var(--auro-size-md);
-      margin-right: var(--auro-size-md);
-    }
-
     .codeWrapper {
       background-color: var(--auro-color-brand-midnight-400);
       color: #fff;
@@ -43,6 +37,10 @@
     code {
       font-family: monospace;
     }
+
+    auro-header {
+      display: block;
+    }
   </style>
 
   <script>
@@ -51,7 +49,9 @@
     }
 
     var auroHeader = [
-      '<auro-header level="2" display="display">Hello World!</auro-header>'
+      '<auro-header level="2" display="display">Hello World!</auro-header>',
+      '<auro-header level="5" display="400" margin="bottom" size="xs">Hello World!</auro-header>',
+      '<auro-header level="3" display="700" margin="bottom" size="xxxs">Hello World!</auro-header>'
     ]
   </script>
 </head>
@@ -83,17 +83,17 @@
     <link rel="stylesheet"
       href="https://unpkg.com/@alaskaairux/orion-design-tokens@2.11.0/dist/tokens/CSSCustomProperties.css" />
     <link rel="stylesheet"
-      href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@2.10.1/dist/bundled/essentials.css" />
+      href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@2.10.2/dist/bundled/essentials.css" />
 
 
     <!-- for initial build and test only -->
-    <script src="./polyfills.js"></script>
-    <script src="./auro-header__bundled.js"></script>
+    <!-- <script src="./polyfills.js"></script>
+    <script src="./auro-header__bundled.js"></script> -->
 
     <!-- once first build has been released, update with the links below -->
     <!-- Be sure to update the :version number -->
-    <!-- <script src="https://unpkg.com/@alaskaairux/auro-header@:version/dist/polyfills.js"></script>
-    <script src="https://unpkg.com/@alaskaairux/auro-header@:version/dist/auro-header__bundled.js"></script> -->
+    <script src="https://unpkg.com/@alaskaairux/auro-header@1.1.0/dist/polyfills.js"></script>
+    <script src="https://unpkg.com/@alaskaairux/auro-header@1.1.0/dist/auro-header__bundled.js"></script>
   </div>
 </body>
 

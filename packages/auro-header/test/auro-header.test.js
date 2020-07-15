@@ -25,6 +25,15 @@ describe('auro-header', () => {
     expect(heading.tagName).to.equal('H1');
   });
 
+  it('sets display prop if empty string', async () => {
+    const el = await fixture(html`
+      <auro-header level="1" display="" color="orange">Hello World!</auro-header>
+    `);
+
+    const heading = el.shadowRoot.querySelector('h1');
+    expect(heading.className).to.equal('heading heading--display ');
+  });
+
   it('sets color to orange', async () => {
     const el = await fixture(html`
       <auro-header level="1" display="display" color="orange">Hello World!</auro-header>

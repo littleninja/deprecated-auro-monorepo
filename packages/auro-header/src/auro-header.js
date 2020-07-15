@@ -22,7 +22,8 @@ class AuroHeader extends LitElement {
   static get properties() {
     return {
       level:    { type: String },
-      display:  { type: String },
+      display:  { type: String,
+                  reflect: true },
       color:    { type: String },
       margin:   { type: String },
       size:     { type: String }
@@ -52,6 +53,10 @@ class AuroHeader extends LitElement {
   }
 
   template(level) {
+    if (this.display === '' || this.display === null) {
+      this.display = 'display'
+    }
+
     switch (level) {
       case '2': return html`<h2 class="heading heading--${this.display} ${this.spacingFunction(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h2>`;
       case '3': return html`<h3 class="heading heading--${this.display} ${this.spacingFunction(this.size)}" style="color: ${ifDefined(this.color ? this.color : undefined)}"><slot></slot></h3>`;

@@ -17,9 +17,101 @@ $auro-spacing-types: stack;
 
 
 // container styles - defines the look of the outer custom componet
-// :host {
-//   ...
-// }
+:host {
+  font-size: 16px;
+}
 
 // layout styles - define any layout specifications for UI that is contained WITHIN the component
 // never define layout that would cause effect on element ouside the scope of this component
+
+
+// the following styles are only to support use of auro-header
+// in legacy UIs where hard-px values are needed.
+:host([type=px]) {
+  .heading--display {
+    font-size: var(--auro-text-heading-display-px-breakpoint-sm);
+    line-height: var(--auro-text-heading-display-height-breakpoint-px-sm);
+
+    @include auro_breakpoint--md {
+      font-size: var(--auro-text-heading-display-px-breakpoint-md);
+      line-height: var(--auro-text-heading-display-height-breakpoint-px-sm);
+    }
+
+    @include auro_breakpoint--lg {
+      font-size: var(--auro-text-heading-display-px-breakpoint-lg);
+      line-height: var(--auro-text-heading-display-height-breakpoint-px-lg);
+    }
+  }
+
+  .heading--800 {
+    font-size: var(--auro-text-heading-800-px-breakpoint-sm);
+    line-height: var(--auro-text-heading-800-height-breakpoint-px-sm);
+
+    @include auro_breakpoint--md {
+      font-size: var(--auro-text-heading-800-px-breakpoint-md);
+      line-height: var(--auro-text-heading-800-height-breakpoint-px-md);
+    }
+
+    @include auro_breakpoint--lg {
+      font-size: var(--auro-text-heading-800-px-breakpoint-lg);
+      line-height: var(--auro-text-heading-800-height-breakpoint-px-lg);
+    }
+  }
+
+  .heading--700 {
+    font-size: var(--auro-text-heading-700-px-breakpoint-sm);
+    line-height: var(--auro-text-heading-700-height-breakpoint-px-sm);
+
+    @include auro_breakpoint--md {
+      font-size: var(--auro-text-heading-700-px-breakpoint-md);
+      line-height: var(--auro-text-heading-700-height-breakpoint-px-md);
+    }
+
+    @include auro_breakpoint--lg {
+      font-size: var(--auro-text-heading-700-px-breakpoint-lg);
+      line-height: var(--auro-text-heading-700-height-breakpoint-px-lg);
+    }
+  }
+
+  .heading--600 {
+    font-size: var(--auro-text-heading-600-px-breakpoint-sm);
+    line-height: var(--auro-text-heading-600-height-breakpoint-px-sm);
+    margin: 16px 0;
+
+    @include auro_breakpoint--md {
+      font-size: var(--auro-text-heading-600-px-breakpoint-md);
+      line-height: var(--auro-text-heading-600-height-breakpoint-px-md);
+    }
+
+    @include auro_breakpoint--lg {
+      line-height: var(--auro-text-heading-600-height-breakpoint-px-lg);
+    }
+  }
+
+  .heading--500 {
+    font-size: var(--auro-text-heading-500-px-breakpoint-sm);
+    line-height: var(--auro-text-heading-500-height-breakpoint-px-sm);
+    margin: 16px 0;
+
+    @include auro_breakpoint--md {
+      font-size: var(--auro-text-heading-500-px-breakpoint-md);
+      line-height: var(--auro-text-heading-500-height-breakpoint-px-md);
+    }
+
+    @include auro_breakpoint--lg {
+      line-height: var(--auro-text-heading-500-height-breakpoint-px-lg);
+    }
+  }
+
+  .heading--400 {
+    font-size: var(--auro-text-heading-400-px);
+    line-height: var(--auro-text-heading-400-height-px);
+    margin: 12px 0;
+  }
+
+  .heading--300 {
+    font-size: var(--auro-text-heading-300-px);
+    line-height: var(--auro-text-heading-300-height-px);
+    margin: 12px 0;
+  }
+}

@@ -26,7 +26,8 @@ class AuroHeader extends LitElement {
                   reflect: true },
       color:    { type: String },
       margin:   { type: String },
-      size:     { type: String }
+      size:     { type: String },
+      type:     { type: String }
     };
   }
 

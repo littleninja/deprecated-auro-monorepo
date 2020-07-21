@@ -1,4 +1,4 @@
-## auro-header
+# Auro-header web component
 
 `<auro-header>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of quickly creating page and content headers.
 

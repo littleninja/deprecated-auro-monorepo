@@ -71,7 +71,7 @@ class AuroCheckboxGroup extends LitElement {
       </fieldset>
 
       ${this.error
-        ? html`<p role="alert" class="errorText">${this.error}</p>`
+        ? html`<p role="alert" aria-live="assertive" class="errorText">${this.error}</p>`
         : html``}
     `;
   }

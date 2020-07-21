@@ -36,9 +36,10 @@
   .cbxGroup {
     display: block;
     background-color: var(--auro-color-brand-atlas-400);
+    padding-right: var(--auro-size-xs);
 
-    padding-right: 10px;
-    margin-right: -10px;
+    // padding-right: 10px;
+    // margin-right: -10px;
 
     .cbx--input {
       background-color: var(--auro-color-brand-atlas-400);
@@ -89,6 +90,7 @@ fieldset {
 .cbxGroup {
   position: relative;
   padding-left: var(--auro-size-xs);
+  padding-right: var(--auro-size-xs);
   line-height: calc((var(--auro-size-xl)) + (var(--auro-size-xxs)))
 }
 

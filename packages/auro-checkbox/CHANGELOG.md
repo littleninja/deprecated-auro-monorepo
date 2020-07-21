@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.1.1](https://github.com/AlaskaAirlines/auro-checkbox/compare/v1.1.0...v1.1.1) (2020-07-21)
+
+
+### Bug Fixes
+
+* address detials discovered with rdo component ([f55e817](https://github.com/AlaskaAirlines/auro-checkbox/commit/f55e8172f66cdd6a9a61f364250640281c30c857))
+
 # [1.1.0](https://github.com/AlaskaAirlines/auro-checkbox/compare/v1.0.1...v1.1.0) (2020-06-30)
 
 

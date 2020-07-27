@@ -1,0 +1,23 @@
+{
+  "name": "auro-components",
+  "version": "1.0.0",
+  "description": "A library of web components for the Alaska Airline design system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "design",
+    "system",
+    "custom",
+    "element"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^3.22.1",
+    "lerna-wizard": "^1.1.1"
+  }
+}

@@ -68,7 +68,7 @@
     "postcss-discard-comments": "^4.0.2",
     "postcss-remove-rules": "^1.0.0",
     "postcss-selector-replace": "^1.0.2",
-    "semantic-release": "^17.1.1",
+    "semantic-release": "^19.0.3",
     "sinon": "^9.0.2",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
